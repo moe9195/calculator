@@ -1,18 +1,11 @@
 
 def main():
 
-	def check_if_number(n):
-		try:
-			float(n)
-		except ValueError:
-			return False
-		return True
 
 	first_number = input("Enter the first number: ")
-	a = check_if_number(first_number)
+	a = first_number.isnumeric()
 	second_number = input("Enter the second number: ")
-	b = check_if_number(second_number)
-
+	b = second_number.isnumeric()
 
 	if a and b:
 		first_number = float(first_number)
@@ -21,18 +14,21 @@ def main():
 
 		if operation == '+':
 			answer = first_number + second_number
+			print('the answer is '+ str(answer))
 		elif operation == '-':
 			answer = first_number - second_number
+			print('the answer is '+ str(answer))
 		elif operation == '/':
 			answer = first_number / second_number
+			print('the answer is '+ str(answer))
 		elif operation == '*':
 			answer = first_number * second_number
+			print('the answer is '+ str(answer))
 		else:
 			print('the operation is not valid')
 
-		print('the answer is '+ str(answer))
 	else:
-		print("The numbers were invalid")
+		print("the numbers were invalid")
 
 	pass
 
